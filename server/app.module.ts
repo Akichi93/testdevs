@@ -12,10 +12,7 @@ import { MongooseModule } from '@nestjs/mongoose';
       bootstrap: AppServerModule,
       viewsPath: join(process.cwd(), 'dist/testdevs/browser')
     }),
-    MongooseModule.forRoot('mongodb://localhost:27017/testdev', {
-      userNewUrlParser: true,
-      userUnifiedTopology: true,
-    }),
+    MongooseModule.forRoot('mongodb://localhost/testdev'),
     TodosModule
   ],
 })
